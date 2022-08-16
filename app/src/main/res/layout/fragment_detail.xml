@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailFragment">
+
+    <!--Scroll-->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollDetail"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Poster-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lytPoster"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_400mdp"
+                app:layout_constraintTop_toTopOf="parent">
+                <!--Big Poster-->
+                <ImageView
+                    android:id="@+id/bigPoster"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.1"
+                    android:scaleType="centerCrop" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgPoster"
+                    android:layout_width="@dimen/_210mdp"
+                    android:layout_height="@dimen/_300mdp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearance="@style/RoundedImageView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Header Button-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lytHeaderButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18mdp"
+                android:layout_marginTop="@dimen/_8mdp"
+                app:layout_constraintTop_toTopOf="parent">
+                <!--Back Button-->
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="@dimen/_35mdp"
+                    android:layout_height="@dimen/_35mdp"
+                    android:background="@drawable/bg_circle_dark"
+                    android:padding="@dimen/_8mdp"
+                    android:src="@drawable/ic_round_arrow_back_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/philippineSilver" />
+
+                <!--Back Button-->
+                <ImageView
+                    android:id="@+id/btnFavorite"
+                    android:layout_width="@dimen/_35mdp"
+                    android:layout_height="@dimen/_35mdp"
+                    android:background="@drawable/bg_circle_dark"
+                    android:padding="@dimen/_8mdp"
+                    android:src="@drawable/ic_round_favorite_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/philippineSilver" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Info-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lytInfo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200mdp"
+                android:background="@drawable/shadow"
+                app:layout_constraintBottom_toBottomOf="@id/lytPoster">
+
+                <!--Title-->
+                <TextView
+                    android:id="@+id/nameMovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10mdp"
+                    android:layout_marginBottom="@dimen/_16mdp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-light"
+                    android:maxLines="2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20font_mdp"
+                    app:layout_constraintBottom_toTopOf="@id/lytOthersInfo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!--Others Info-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/lytOthersInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_20mdp"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+
+                    <!--Rate-->
+                    <TextView
+                        android:id="@+id/txtRate"
+                        style="@style/TextViewLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/_5mdp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/philippineSilver"
+                        android:textSize="@dimen/_10font_mdp"
+                        app:drawableStartCompat="@drawable/ic_round_star_24"
+                        app:drawableTint="@color/philippineSilver"
+                        android:gravity="center"
+                        app:layout_constraintEnd_toStartOf="@+id/txtTimeMovie"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!--Time-->
+                    <TextView
+                        android:id="@+id/txtTimeMovie"
+                        style="@style/TextViewLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/_5mdp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:gravity="center"
+                        android:textColor="@color/philippineSilver"
+                        android:textSize="@dimen/_10font_mdp"
+                        app:drawableStartCompat="@drawable/ic_round_language_24"
+                        app:drawableTint="@color/philippineSilver"
+                        app:layout_constraintEnd_toStartOf="@+id/txtYear"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/txtRate"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!--Year-->
+                    <TextView
+                        android:id="@+id/txtYear"
+                        style="@style/TextViewLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/_5mdp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/philippineSilver"
+                        android:textSize="@dimen/_10font_mdp"
+                        app:drawableStartCompat="@drawable/ic_round_calendar_today_24"
+                        app:drawableTint="@color/philippineSilver"
+                        android:gravity="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/txtTimeMovie"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Summery-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lytSummery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16mdp"
+                app:layout_constraintTop_toBottomOf="@id/lytPoster">
+
+
+                <!--Title Summery-->
+                <TextView
+                    android:id="@+id/titleSummery"
+                    style="@style/TextViewLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_5mdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/summary"
+                    android:textColor="@color/philippineSilver"
+                    android:textSize="@dimen/_12font_mdp"
+                    app:drawableStartCompat="@drawable/ic_round_info_24"
+                    app:drawableTint="@color/philippineSilver"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--Description Summery-->
+                <TextView
+                    android:id="@+id/txtSummery"
+                    style="@style/TextViewLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4mdp"
+                    android:textColor="@color/philippineSilver"
+                    android:textSize="@dimen/_10font_mdp"
+                    app:layout_constraintStart_toStartOf="@id/titleSummery"
+                    app:layout_constraintTop_toBottomOf="@id/titleSummery" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!--Actors-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lytActors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16mdp"
+                app:layout_constraintTop_toBottomOf="@id/lytSummery">
+
+
+                <!--Title Actors-->
+                <TextView
+                    android:id="@+id/titleActors"
+                    style="@style/TextViewLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10mdp"
+                    android:drawablePadding="@dimen/_5mdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/actors"
+                    android:textColor="@color/philippineSilver"
+                    android:textSize="@dimen/_12font_mdp"
+                    app:drawableStartCompat="@drawable/ic_round_person_24"
+                    app:drawableTint="@color/philippineSilver"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--Description Summery-->
+                <TextView
+                    android:id="@+id/txtActors"
+                    style="@style/TextViewLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4mdp"
+                    android:textColor="@color/philippineSilver"
+                    android:textSize="@dimen/_10font_mdp"
+                    app:layout_constraintStart_toStartOf="@id/titleActors"
+                    app:layout_constraintTop_toBottomOf="@id/titleActors" />
+
+                <!--Recycler Actors-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleActors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingHorizontal="@dimen/_10mdp"
+                    app:layout_constraintTop_toBottomOf="@id/txtActors" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--Loading-->
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_200mdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

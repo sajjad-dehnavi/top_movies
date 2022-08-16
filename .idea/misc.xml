@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/dunijet/TopMoview/app/src/main/res/drawable/shadow.xml" value="0.228" />
+        <entry key="..\:/dunijet/TopMoview/app/src/main/res/layout/activity_main.xml" value="0.18541666666666667" />
+        <entry key="..\:/dunijet/TopMoview/app/src/main/res/layout/empty_item.xml" value="0.3625" />
+        <entry key="..\:/dunijet/TopMoview/app/src/main/res/layout/fragment_detail.xml" value="0.3625" />
+        <entry key="..\:/dunijet/TopMoview/app/src/main/res/layout/fragment_favorite.xml" value="0.33" />
+        <entry key="..\:/dunijet/TopMoview/app/src/main/res/layout/fragment_home.xml" value="0.3625" />
+        <entry key="..\:/dunijet/TopMoview/app/src/main/res/layout/fragment_register.xml" value="0.3625" />
+        <entry key="..\:/dunijet/TopMoview/app/src/main/res/layout/fragment_search.xml" value="0.3625" />
+        <entry key="..\:/dunijet/TopMoview/app/src/main/res/layout/fragment_splash.xml" value="0.25" />
+        <entry key="..\:/dunijet/TopMoview/app/src/main/res/layout/item_detail_images.xml" value="0.3625" />
+        <entry key="..\:/dunijet/TopMoview/app/src/main/res/layout/item_hom_top_movies.xml" value="0.3625" />
+        <entry key="..\:/dunijet/TopMoview/app/src/main/res/layout/item_home_genre.xml" value="0.3614583333333333" />
+        <entry key="..\:/dunijet/TopMoview/app/src/main/res/layout/item_movie.xml" value="0.3625" />
+        <entry key="..\:/dunijet/TopMoview/app/src/main/res/menu/menu_main.xml" value="0.3625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
